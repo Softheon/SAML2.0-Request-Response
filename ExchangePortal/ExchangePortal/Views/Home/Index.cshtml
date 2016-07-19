@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Make a Payment";
+}
+
+@using (Html.BeginForm("CarrierRedirect", "Home", FormMethod.Post))
+{
+    <div class="row pad-top-heavy">
+        <div class="col-xs-12">
+            <h4>Subscriber Information</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="FirstName">First Name</label>
+            <input type="text" name="FirstName" id="FirstName" value="@Model.FirstName" class="form-control"/>
+        </div>
+        <div class="col-sm-2">
+            <label for="MiddleInitial">Middle Initial</label>
+            <input type="text" name="MiddleInitial" id="MiddleInitial" value="@Model.MiddleInitial" class="form-control"/>
+        </div>
+        <div class="col-sm-4">
+            <label for="LastName">Last Name</label>
+            <input type="text" name="LastName" id="LastName" value="@Model.LastName" class="form-control"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" value="@Model.Email" class="form-control"/>
+        </div>
+    </div>
+    <div class="row pad-top-heavy">
+        <div class="col-xs-12">
+            <h4>Billing Information</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="BillingFirstName">First Name</label>
+            <input type="text" name="BillingFirstName" id="BillingFirstName" value="@Model.BillingFirstName" class="form-control"/>
+        </div>
+        <div class="col-sm-2">
+            <label for="BillingMiddleInitial">Middle Initial</label>
+            <input type="text" name="BillingMiddleInitial" id="BillingMiddleInitial" value="@Model.BillingMiddleInitial" class="form-control"/>
+        </div>
+        <div class="col-sm-4">
+            <label for="BillingLastName">Last Name</label>
+            <input type="text" name="BillingLastName" id="BillingLastName" value="@Model.BillingLastName" class="form-control"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="Address1">Address 1</label>
+            <input type="text" name="Address1" id="Address1" value="@Model.Address1" class="form-control"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="Address2">Address 2</label>
+            <input type="text" name="Address2" id="Address2" value="@Model.Address2" class="form-control"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="City">City</label>
+            <input type="text" name="City" id="City" value="@Model.City" class="form-control"/>
+        </div>
+        <div class="col-sm-2">
+            <label for="State">State</label>
+            <select name="State" id="State" class="form-control">
+                @foreach (var state in Model.States)
+                {
+                    <option value="@state">@state</option>
+                }
+            </select>
+        </div>
+        <div class="col-sm-3">
+            <label for="Zip">Zip Code</label>
+            <input type="text" value="@Model.Zip" name="Zip" id="Zip" class="form-control"/>
+        </div>
+    </div>
+    <div class="row pad-top-heavy">
+        <div class="col-xs-12">
+            <input type="submit" id="Submit" value="Make a Payment" class="btn btn-primary"/>
+        </div>
+    </div>
+}
