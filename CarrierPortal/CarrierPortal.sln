@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarrierPortal", "CarrierPortal\CarrierPortal.csproj", "{8BD3922F-EC04-4522-8139-A87AD3CE16E0}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://ny-pstf-sof-01:8080/tfs/softheonprojectcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CarrierPortal\\CarrierPortal.csproj
+		SccProjectName1 = CarrierPortal
+		SccLocalPath1 = CarrierPortal
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BD3922F-EC04-4522-8139-A87AD3CE16E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD3922F-EC04-4522-8139-A87AD3CE16E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD3922F-EC04-4522-8139-A87AD3CE16E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD3922F-EC04-4522-8139-A87AD3CE16E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

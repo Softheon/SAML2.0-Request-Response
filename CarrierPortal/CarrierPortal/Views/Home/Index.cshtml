@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Carrier Portal";
+}
+
+@using (Html.BeginForm("ExchangeRedirect", "Home", FormMethod.Post))
+{
+    <div class="row pad-top-heavy">
+        <div class="col-xs-12">
+            <h4>Subscriber Information</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="Email">Email</label>
+            <input type="email" name="Email" id="Email" value="@Model.Email" class="form-control" readonly="readonly" />
+        </div>
+    </div>
+    <div class="row pad-top-heavy">
+        <div class="col-xs-12">
+            <h4>Billing Information</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="BillingFirstName">First Name</label>
+            <input type="text" name="BillingFirstName" id="BillingFirstName" value="@Model.BillingFirstName" class="form-control" readonly="readonly" />
+        </div>
+        <div class="col-sm-2">
+            <label for="BillingMiddleInitial">Middle Initial</label>
+            <input type="text" name="BillingMiddleInitial" id="BillingMiddleInitial" value="@Model.BillingMiddleInitial" class="form-control" readonly="readonly" />
+        </div>
+        <div class="col-sm-4">
+            <label for="BillingLastName">Last Name</label>
+            <input type="text" name="BillingLastName" id="BillingLastName" value="@Model.BillingLastName" class="form-control" readonly="readonly" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="Address1">Address 1</label>
+            <input type="text" name="Address1" id="Address1" value="@Model.Address1" class="form-control" readonly="readonly" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="Address2">Address 2</label>
+            <input type="text" name="Address2" id="Address2" value="@Model.Address2" class="form-control" readonly="readonly" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <label for="City">City</label>
+            <input type="text" name="City" id="City" value="@Model.City" class="form-control" readonly="readonly" />
+        </div>
+        <div class="col-sm-2">
+            <label for="State">State</label>
+            <input type="text" name="State" id="State" value="@Model.State" class="form-control" readonly="readonly" />
+        </div>
+        <div class="col-sm-3">
+            <label for="Zip">Zip Code</label>
+            <input type="text" value="@Model.Zip" name="Zip" id="Zip" class="form-control" readonly="readonly" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <label for="PaymentAmount">Payment Amount</label>
+            <input type="text" value="@Model.PaymentAmount" name="PaymentAmount" id="PaymentAmount" class="form-control" readonly="readonly" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-3">
+            <label for="CreditCardNumber">Credit Card Number</label>
+            <input type="number" value="@Model.CreditCardNumber" name="CreditCardNumber" id="CreditCardNumber" class="form-control" />
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <label for="CVC">CVC Code</label>
+            <input type="number" value="@Model.Cvc" name="CVC" id="CVC" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-2">
+            <label for="ExpirationMonth">Expiration Month</label>
+            <input type="number" value="@Model.ExpirationMonth" name="ExpirationMonth" id="ExpirationMonth" class="form-control" />
+        </div>
+        <div class="col-xs-12 col-sm-2">
+            <label for="ExpirationYear">Expiration Year</label>
+            <input type="number" value="@Model.ExpirationYear" name="ExpirationYear" id="ExpirationYear" class="form-control" />
+        </div>
+    </div>
+    <div class="row pad-top-heavy">
+        <div class="col-xs-12">
+            <input type="submit" id="Submit" value="Submit Payment" class="btn btn-primary" readonly="readonly" />
+        </div>
+    </div>
+    <input type="hidden" value="@Model.RedirectUrl" name="RedirectUrl" id="RedirectUrl" class="form-control" />
+}

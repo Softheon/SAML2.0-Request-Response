@@ -1,0 +1,16 @@
+﻿@Scripts.Render("~/bundles/jquery")
+
+<script type="text/javascript">
+    $(function () {
+        submitForm();
+    });
+
+    function submitForm() {
+        $("form").submit();
+    }
+</script>
+
+<form id="ffmForm" method="post" action="@Model.PostAction">
+    <input type="hidden" id="SAMLResponse" name="SAMLResponse" value="@Model.SamlResponse" />
+    <p> If you are not redirected in a few seconds please <a href="javascript:void(0)" onclick="submitForm()">click here</a></p>
+</form>
